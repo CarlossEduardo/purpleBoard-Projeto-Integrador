@@ -10,4 +10,12 @@
     <lifecycle>
         <phase-listener>org.springframework.web.jsf.DelegatingPhaseListenerMulticaster</phase-listener>
     </lifecycle>
+    
+    <managed-bean>
+        <managed-bean-name></managed-bean-name>
+        <managed-bean-class></managed-bean-class>
+        <managed-bean-scope></managed-bean-scope>
+    </managed-bean>
+    
+    
 </faces-config>

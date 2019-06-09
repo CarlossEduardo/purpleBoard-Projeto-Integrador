@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<f:view contentType="text/html" locale="pt" />
+<head>
+
+<!--criar tabela com pesquisa-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!--Tentativa tabela
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	
+	
+
+
+<!-- Required meta tags-->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta name="description" content="au theme template"/>
+<meta name="author" content="Hau Nguyen"/>
+<meta name="keywords" content="au theme template"/>
+
+<!-- Title Page-->
+<title>purpleBoard</title>
+<link rel="icon" type="image/jpg" href="images/PurpleGrape.png" />
+
+<!-- Fontfaces CSS-->
+<link href="css/font-face.css" rel="stylesheet" media="all"/>
+<link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all"/>
+<link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all"/>
+<link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all"/>
+
+<!-- Bootstrap CSS-->
+<link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all"/>
+
+<!-- Vendor CSS-->
+<link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all"/>
+<link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all"/>
+<link href="vendor/wow/animate.css" rel="stylesheet" media="all"/>
+<link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all"/>
+<link href="vendor/slick/slick.css" rel="stylesheet" media="all"/>
+<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all"/>
+<link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all"/>
+
+<!-- Main CSS-->
+<link href="css/theme.css" rel="stylesheet" media="all"/>
+</head>
+
+<body class="animsition">
+<div class="page-wrapper"> 
+  <!-- HEADER MOBILE-->
+  <header class="header-mobile d-block d-lg-none">
+    <div class="header-mobile__bar">
+      <div class="container-fluid">
+        <div class="header-mobile-inner"> <a class="logo" href="crazy.xhtml"> <img src="images/logo1.png" alt="purpleBoard" /> </a>
+          <button class="hamburger hamburger--slider" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </button>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar-mobile">
+      <div class="container-fluid">
+        <ul class="navbar-mobile__list list-unstyled">
+          <li> <a href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
+          <li> <a href="vendas.xhtml"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
+          <li> <a href="lojas.xhtml"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
+          <li> <a href="cliente.xhtml"> <i class="zmdi zmdi-account"></i>Clientes</a> </li>
+          <li> <a href="produtos.xhtml"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- END HEADER MOBILE--> 
+  
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo"> <a href="#"> <img src="images/logo1.png" alt="purpleBoard" /> </a> </div>
+    <div class="menu-sidebar__content js-scrollbar1">
+      <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar__list">
+          <li> <a href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
+          <li> <a href="vendas.xhtml"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
+          <li> <a href="lojas.xhtml"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
+          <li> <a href="cliente.xhtml"> <i class="zmdi zmdi-account"></i>Clientes</a> </li>
+          <li> <a href="produtos.xhtml"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+  <!-- END MENU SIDEBAR--> 
+  
+  <!-- PAGE CONTAINER-->
+  <div class="page-container"> 
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+            <form class="form-header" action="" method="POST">
+              
+              <!--Tirei o formulario de pesquisa-->
+              
+            </form>
+            <div class="header-button">
+              <div class="noti-wrap"> </div>
+              <div class="account-wrap">
+                <div class="account-item clearfix js-item-menu">
+                  <div class="image"> <img src="images/icon/avatar-01.jpg" alt="John Doe" /> </div>
+                  <div class="content"> <a class="js-acc-btn" href="#">Marcelo</a> </div>
+                  <div class="account-dropdown js-dropdown">
+                    <div class="info clearfix">
+                      <div class="image"> <a href="#"> <img src="images/icon/avatar-01.jpg" alt="John Doe" /> </a> </div>
+                      <div class="content">
+                        <h5 class="name"> <a href="#">Marcelo</a> </h5>
+                        <span class="email">marcelo.rcs@icloud.com</span> </div>
+                    </div>
+                    <div class="account-dropdown__body">
+                      <div class="account-dropdown__item"> <a href="#"> <i class="zmdi zmdi-account"></i>Account</a> </div>
+                      <div class="account-dropdown__item"> <a href="#"> <i class="zmdi zmdi-settings"></i>Setting</a> </div>
+                      <div class="account-dropdown__item"> <a href="#"> <i class="zmdi zmdi-money-box"></i>Billing</a> </div>
+                    </div>
+                    <div class="account-dropdown__footer"> <a href="#"> <i class="zmdi zmdi-power"></i>Logout</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER DESKTOP--> 
+    
+    <!-- MAIN CONTENT-->
+    <div class="main-content">
+      <div class="section__content section__content--p30">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="pb-2 display-5">Lojas</h2>
+                
+                <!--tirei o buttun add--> 
+                
+              </div>
+            </div>
+          </div>
+          <div class="row m-t-25"> </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="au-card recent-report">
+                <div class="au-card-inner">
+                  <h3 class="title-2">Descrição kkk</h3>
+                 
+				  
+                  <br></br>
+				
+                  <h:form class="form-inline">
+                    <label for="inlineFormInputName2">Ano</label>
+                    <h:inputText value="#{mostrarControle.ano}" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"/>
+			<label for="inlineFormInputName2">Semestre</label>
+                        <h:selectOneMenu value="#{mostrarControle.semestre}" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                              <f:selectItem itemLabel="Primeiro" itemValue="1"/>
+                              <f:selectItem itemLabel="Segundo" itemValue="2"/>
+     			</h:selectOneMenu>
+                    
+                        <h:commandButton class="btn btn-lg btn-primary" value="submit" type="submit" action="#{mostrarControle.acaoConsultarBancoeRetornarTable()}"/>
+					  
+                  </h:form>
+				  
+				   <br>
+                  </br>
+                  <div class="form-group input-group"> 
+					  <span class="input-group-addon"> 
+						  <i class="glyphicon glyphicon-search"></i> 
+					  </span>
+                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control"/>
+                  </div>
+				
+                  <br></br>
+                  <div class="table-responsive table-responsive-data2">
+                      <h:dataTable id="tabela"  class="table table-data2" value="#{mostrarControle.tabela2Loja}" var="loja">
+                      <h:column>
+                        <f:facet  name="header">NOME</f:facet>
+                        #{loja.nome} </h:column>
+                      <h:column>
+                        <f:facet name="header">CNPJ</f:facet>
+                        #{loja.cnpj}</h:column>
+                      <h:column>
+                        <f:facet name="header">Quantidade de Vendas</f:facet>
+                        #{loja.quantidade}</h:column>
+                      <h:column>
+                        <f:facet name="header">Valor Total das Vendas</f:facet>
+                        #{loja.valortotal}</h:column>
+                      <h:column>
+                        <f:facet name="header">Ano</f:facet>
+                        #{loja.ano}</h:column>
+                      <h:column>
+                        <f:facet name="header">Semestre</f:facet>
+                        #{loja.semestre}</h:column>
+                    </h:dataTable>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row"> </div>
+          <div class="row"> </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>Copyright © 2019 purpleBoard - MIT licensed.</p>
+                <p>Made with ♡</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MAIN CONTENT--> 
+    <!-- END PAGE CONTAINER--> 
+  </div>
+</div>
+
+<!--Fazer tabela com consulta--> 
+	<script>
+            $('input#txt_consulta').quicksearch('table#tabela tbody tr')
+        </script> 
+
+<!-- Jquery JS--> 
+<script src="vendor/jquery-3.2.1.min.js"></script> 
+<!-- Bootstrap JS--> 
+<script src="vendor/bootstrap-4.1/popper.min.js"></script> 
+<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script> 
+<!-- Vendor JS       --> 
+<script src="vendor/slick/slick.min.js">
+        </script> 
+<script src="vendor/wow/wow.min.js"></script> 
+<script src="vendor/animsition/animsition.min.js"></script> 
+<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+        </script> 
+<script src="vendor/counter-up/jquery.waypoints.min.js"></script> 
+<script src="vendor/counter-up/jquery.counterup.min.js">
+        </script> 
+<script src="vendor/circle-progress/circle-progress.min.js"></script> 
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script> 
+<script src="vendor/chartjs/Chart.bundle.min.js"></script> 
+<script src="vendor/select2/select2.min.js">
+        </script> 
+
+
+<!-- Main JS--> 
+<script src="js/main.js"></script>
+</body>
+</html>
