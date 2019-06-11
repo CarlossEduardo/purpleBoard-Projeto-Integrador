@@ -6,7 +6,21 @@
       xmlns:f="http://java.sun.com/jsf/core">
 <f:view contentType="text/html" locale="pt" />
 <head>
-    
+
+<!--criar tabela com pesquisa-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!--Tentativa tabela
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
 <!-- Required meta tags-->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -54,12 +68,11 @@
     <nav class="navbar-mobile">
       <div class="container-fluid">
         <ul class="navbar-mobile__list list-unstyled">
-          <li> <a class="js-arrow" href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
-          <li> <a href="chart.html"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
-          <li> <a href="table.html"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
+          <li> <a href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
+          <li> <a href="vendas.xhtml"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
+          <li> <a href="lojas.xhtml"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
           <li> <a href="cliente.xhtml"> <i class="zmdi zmdi-account"></i>Clientes</a> </li>
-          <li> <a href="#"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
-
+          <li> <a href="produtos.xhtml"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
         </ul>
       </div>
     </nav>
@@ -72,11 +85,11 @@
     <div class="menu-sidebar__content js-scrollbar1">
       <nav class="navbar-sidebar">
         <ul class="list-unstyled navbar__list">
-          <li> <a class="js-arrow" href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
+          <li> <a href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
           <li> <a href="vendas.xhtml"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
-          <li> <a href="table.html"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
+          <li> <a href="lojas.xhtml"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
           <li> <a href="cliente.xhtml"> <i class="zmdi zmdi-account"></i>Clientes</a> </li>
-          <li> <a href="#"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
+          <li> <a href="produtos.xhtml"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
         </ul>
       </nav>
     </div>
@@ -99,7 +112,7 @@
               <div class="noti-wrap"> </div>
               <div class="account-wrap">
                 <div class="account-item clearfix js-item-menu">
-                  <div class="image"> <img src="images/icon/avatar-01.jpg" alt="John Doe" /> </div>
+                  <div class="image"> <img src="images/bg-title-01.jpg" alt="John Doe" /> </div>
                   <div class="content"> <a class="js-acc-btn" href="#">Marcelo</a> </div>
                   <div class="account-dropdown js-dropdown">
                     <div class="info clearfix">
@@ -131,149 +144,136 @@
           <div class="row">
             <div class="col-md-12">
               <div class="overview-wrap">
-                <h2 class="title-1">Semestre Atual</h2>
+                <h2 class="pb-2 display-5">Produtos</h2>
                 
                 <!--tirei o buttun add--> 
                 
               </div>
             </div>
           </div>
-          <div class="row m-t-25">
-            <div class="col-sm-6 col-lg-3"> <a href="cliente.xhtml">
-              <div class="overview-item overview-item--c1">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-account-o"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.qtdeCliente}</h2>
-                      <span>Qtde de Cliente</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart1"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-            <div class="col-sm-6 col-lg-3"> <a href="https://www.google.com/">
-              <div class="overview-item overview-item--c2">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-shopping-cart"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.quantidadeVendaSemestre}</h2>
-                      <span>Qtde de Vendas</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart2"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-            <div class="col-sm-6 col-lg-3"> <a href="https://www.google.com/">
-              <div class="overview-item overview-item--c3">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-calendar-note"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.qtdeLojas}</h2>
-                      <span>Qtde de Lojas</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart3"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-            <div class="col-sm-6 col-lg-3"> <a href="https://www.google.com/">
-              <div class="overview-item overview-item--c4">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-money"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.valorvendaSemestre}</h2>
-                      <span>Total Vendido</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart4"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-          </div>
+          <div class="row m-t-25"> </div>
           <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-12">
               <div class="au-card recent-report">
                 <div class="au-card-inner">
-                  <h3 class="title-2">recent reports</h3>
-                  <div class="chart-info">
-                    <div class="chart-info__left">
-                      <div class="chart-note"> <span class="dot dot--blue"></span> <span>products</span> </div>
-                      <div class="chart-note mr-0"> <span class="dot dot--green"></span> <span>services</span> </div>
-                    </div>
-                    <div class="chart-info__right">
-                      <div class="chart-statis"> <span class="index incre"> <i class="zmdi zmdi-long-arrow-up"></i>25%</span> <span class="label">products</span> </div>
-                      <div class="chart-statis mr-0"> <span class="index decre"> <i class="zmdi zmdi-long-arrow-down"></i>10%</span> <span class="label">services</span> </div>
-                    </div>
+                  <h3 class="title-2">
+                  Quantidade total de cada um dos produtos vendidos por Período</h3> <br>
+                  </br>
+                  <h:form class="form-inline">
+                    <label for="inlineFormInputName2">Escolha o Período </label>
+                    <h:selectOneMenu value="#{mostrarControle.periodo}" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <f:selectItem itemLabel="Bimestre" itemValue="bimestre"/>
+                      <f:selectItem itemLabel="Trimestre" itemValue="trimestre"/>
+                      <f:selectItem itemLabel="Semestre" itemValue="semestre"/>
+                    </h:selectOneMenu>
+					 <label for="inlineFormInputName2"> Ano </label> 
+					 <h:inputText value="#{mostrarControle.anoproduto}" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"/>
+                                         <h:commandButton class="btn btn-lg btn-primary" value="Consultar" type="submit" action="#{mostrarControle.acaoConsultarTabela1porPeriodo()}"/>
+                  </h:form>
+				  
+                  <br>
+                  </br>
+                  <div class="form-group input-group"> <span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i> </span>
+                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control"/>
                   </div>
-                  <div class="recent-report__chart">
-                    <canvas id="recent-rep-chart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-
-              <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
-                <div class="au-card-inner">
-                  <div class="table-responsive">
-                    <table class="table table-top-countries">
-                      <tbody>
-                        <tr>
-                          <td>United States</td>
-                          <td class="text-right">$119,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>Australia</td>
-                          <td class="text-right">$70,261.65</td>
-                        </tr>
-                        <tr>
-                          <td>United Kingdom</td>
-                          <td class="text-right">$46,399.22</td>
-                        </tr>
-                        <tr>
-                          <td>Turkey</td>
-                          <td class="text-right">$35,364.90</td>
-                        </tr>
-                        <tr>
-                          <td>Germany</td>
-                          <td class="text-right">$20,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>France</td>
-                          <td class="text-right">$10,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>Australia</td>
-                          <td class="text-right">$5,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>Italy</td>
-                          <td class="text-right">$1639.32</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <br>
+                  </br>
+				
+                  <div style="overflow: auto; height: 400px" class="table-responsive table-responsive-data2">
+                      <h:dataTable id="tabela"  class="table table-data2" value="#{mostrarControle.tabela1bimestre}" var="produto">
+                      <h:column>
+                        <f:facet  name="header">CODIGO</f:facet>
+                        #{produto.codigo} </h:column>
+                      <h:column>
+                        <f:facet name="header">DESCRIÇÃO</f:facet>
+                        #{produto.descricao}</h:column>
+                      <h:column>
+                        <f:facet name="header">QUANTIDADE TOTAL</f:facet>
+                        #{produto.quantidade}</h:column>
+                      <h:column>
+                        <f:facet name="header">VALOR TOTAL</f:facet>
+                        #{produto.valorTotal}</h:column>
+                      <h:column>
+                        <f:facet name="header">PERÍODO</f:facet>
+                        #{produto.periodo}</h:column>
+                      <h:column>
+                        <f:facet name="header">ANO</f:facet>
+                        #{produto.ano}</h:column>
+                    </h:dataTable>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row"> </div>
+          <div class="row">
+	  <div class="col-lg-12">
+              <div class="au-card recent-report">
+                <div class="au-card-inner">
+                  <h3 class="title-2">Quantidade total de cada um dos produtos vendidos por data, mês ou ano</h3>
+                 
+				  
+                  <br></br>
+				
+              	<h:form class="form-inline">
+                    
+                    <label for="inlineFormInputName2">Consultar por : </label>
+                    <h:selectOneMenu value="#{mostrarControle.opcaodata}" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <f:selectItem itemLabel="Dia : dd/mm/aaaa" itemValue="1"/>
+                      <f:selectItem itemLabel="Mês : mm/aaaa" itemValue="2"/>
+                      <f:selectItem itemLabel="Ano : aaaa" itemValue="3"/>
+                    </h:selectOneMenu>
+                    
+                    <label for="inlineFormInputName2"> Informe : </label> 
+                    <h:inputText value="#{mostrarControle.campodata}" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"/>
+                    <h:commandButton class="btn btn-lg btn-primary" value="Consultar" type="submit" action="#{mostrarControle.acaoConsultaTabela1PorData()}"/>
+                </h:form>
+				  
+				  
+				   <br>
+                  </br>
+                  <div class="form-group input-group"> 
+					  <span class="input-group-addon"> 
+						  <i class="glyphicon glyphicon-search"></i> 
+					  </span>
+                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control"/>
+                  </div>
+				
+                  <br></br>
+                  <div style="overflow: auto; height: 400px" class="table-responsive table-responsive-data2">
+                      <h:dataTable id="tabela1"  class="table table-data2" value="#{mostrarControle.tabela1data}" var="produtoo">
+                        <h:column>
+                        <f:facet  name="header">CODIGO</f:facet>
+                        #{produtoo.codigo} </h:column>
+                        <h:column>
+                        <f:facet  name="header">DESCRIÇÃO</f:facet>
+                        #{produtoo.descricao} </h:column>
+                        <h:column>
+                        <f:facet  name="header">QUANTIDADE DE VENDAS</f:facet>
+                        #{produtoo.quantidade} </h:column>
+                        <h:column>
+                        <f:facet  name="header">VALOR TOTAL</f:facet>
+                        #{produtoo.valorTotal} </h:column>
+                          
+                          
+                      </h:dataTable>
+                      
+                  </div>
+
+                </div>
+              </div>
+            </div>
+			  
+			  
+			  
+			  
+	  
+	  	  </div>
           <div class="row"> </div>
           <div class="row">
             <div class="col-md-12">
               <div class="copyright">
                 <p>Copyright © 2019 purpleBoard - MIT licensed.</p>
-					<p>Made with ♡</p>
+                <p>Made with ♡</p>
               </div>
             </div>
           </div>
@@ -284,6 +284,14 @@
     <!-- END PAGE CONTAINER--> 
   </div>
 </div>
+
+<!--Fazer tabela com consulta--> 
+<script>
+            $('input#txt_consulta').quicksearch('table#tabela tbody tr')
+</script> 
+<script>
+            $('input#txt_consulta').quicksearch('table#tabela1 tbody tr')
+</script> 
 
 <!-- Jquery JS--> 
 <script src="vendor/jquery-3.2.1.min.js"></script> 

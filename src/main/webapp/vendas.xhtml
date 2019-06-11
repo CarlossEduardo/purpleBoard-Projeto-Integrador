@@ -6,7 +6,24 @@
       xmlns:f="http://java.sun.com/jsf/core">
 <f:view contentType="text/html" locale="pt" />
 <head>
-    
+
+<!--criar tabela com pesquisa-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!--Tentativa tabela
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	
+	
+
+
 <!-- Required meta tags-->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -54,12 +71,11 @@
     <nav class="navbar-mobile">
       <div class="container-fluid">
         <ul class="navbar-mobile__list list-unstyled">
-          <li> <a class="js-arrow" href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
-          <li> <a href="chart.html"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
-          <li> <a href="table.html"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
+          <li> <a href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
+          <li> <a href="vendas.xhtml"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
+          <li> <a href="lojas.xhtml"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
           <li> <a href="cliente.xhtml"> <i class="zmdi zmdi-account"></i>Clientes</a> </li>
-          <li> <a href="#"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
-
+          <li> <a href="produtos.xhtml"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
         </ul>
       </div>
     </nav>
@@ -72,11 +88,11 @@
     <div class="menu-sidebar__content js-scrollbar1">
       <nav class="navbar-sidebar">
         <ul class="list-unstyled navbar__list">
-          <li> <a class="js-arrow" href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
+          <li> <a href="crazy.xhtml"> <i class="fa fa-home"></i>Home</a> </li>
           <li> <a href="vendas.xhtml"> <i class="zmdi zmdi-shopping-cart"></i>Vendas</a> </li>
-          <li> <a href="table.html"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
+          <li> <a href="lojas.xhtml"> <i class="zmdi zmdi-store"></i>Lojas</a> </li>
           <li> <a href="cliente.xhtml"> <i class="zmdi zmdi-account"></i>Clientes</a> </li>
-          <li> <a href="#"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
+          <li> <a href="produtos.xhtml"> <i class="zmdi zmdi-shopping-basket"></i>Produtos</a> </li>
         </ul>
       </nav>
     </div>
@@ -131,137 +147,75 @@
           <div class="row">
             <div class="col-md-12">
               <div class="overview-wrap">
-                <h2 class="title-1">Semestre Atual</h2>
+                <h2 class="pb-2 display-5">Vendas</h2>
                 
                 <!--tirei o buttun add--> 
                 
               </div>
             </div>
           </div>
-          <div class="row m-t-25">
-            <div class="col-sm-6 col-lg-3"> <a href="cliente.xhtml">
-              <div class="overview-item overview-item--c1">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-account-o"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.qtdeCliente}</h2>
-                      <span>Qtde de Cliente</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart1"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-            <div class="col-sm-6 col-lg-3"> <a href="https://www.google.com/">
-              <div class="overview-item overview-item--c2">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-shopping-cart"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.quantidadeVendaSemestre}</h2>
-                      <span>Qtde de Vendas</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart2"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-            <div class="col-sm-6 col-lg-3"> <a href="https://www.google.com/">
-              <div class="overview-item overview-item--c3">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-calendar-note"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.qtdeLojas}</h2>
-                      <span>Qtde de Lojas</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart3"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-            <div class="col-sm-6 col-lg-3"> <a href="https://www.google.com/">
-              <div class="overview-item overview-item--c4">
-                <div class="overview__inner">
-                  <div class="overview-box clearfix">
-                    <div class="icon"> <i class="zmdi zmdi-money"></i> </div>
-                    <div class="text">
-                      <h2>#{mostrarControle.valorvendaSemestre}</h2>
-                      <span>Total Vendido</span> </div>
-                  </div>
-                  <div class="overview-chart">
-                    <canvas id="widgetChart4"></canvas>
-                  </div>
-                </div>
-              </div>
-              </a> </div>
-          </div>
+          <div class="row m-t-25"> </div>
           <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-12">
               <div class="au-card recent-report">
                 <div class="au-card-inner">
-                  <h3 class="title-2">recent reports</h3>
-                  <div class="chart-info">
-                    <div class="chart-info__left">
-                      <div class="chart-note"> <span class="dot dot--blue"></span> <span>products</span> </div>
-                      <div class="chart-note mr-0"> <span class="dot dot--green"></span> <span>services</span> </div>
-                    </div>
-                    <div class="chart-info__right">
-                      <div class="chart-statis"> <span class="index incre"> <i class="zmdi zmdi-long-arrow-up"></i>25%</span> <span class="label">products</span> </div>
-                      <div class="chart-statis mr-0"> <span class="index decre"> <i class="zmdi zmdi-long-arrow-down"></i>10%</span> <span class="label">services</span> </div>
-                    </div>
-                  </div>
-                  <div class="recent-report__chart">
-                    <canvas id="recent-rep-chart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
+                  <h3 class="title-2">Quantidade total de vendas por produto e por loja</h3>
+                 
+				  
+                  <br></br>
+				
+                  <h:form class="form-inline">
 
-              <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
-                <div class="au-card-inner">
-                  <div class="table-responsive">
-                    <table class="table table-top-countries">
-                      <tbody>
-                        <tr>
-                          <td>United States</td>
-                          <td class="text-right">$119,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>Australia</td>
-                          <td class="text-right">$70,261.65</td>
-                        </tr>
-                        <tr>
-                          <td>United Kingdom</td>
-                          <td class="text-right">$46,399.22</td>
-                        </tr>
-                        <tr>
-                          <td>Turkey</td>
-                          <td class="text-right">$35,364.90</td>
-                        </tr>
-                        <tr>
-                          <td>Germany</td>
-                          <td class="text-right">$20,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>France</td>
-                          <td class="text-right">$10,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>Australia</td>
-                          <td class="text-right">$5,366.96</td>
-                        </tr>
-                        <tr>
-                          <td>Italy</td>
-                          <td class="text-right">$1639.32</td>
-                        </tr>
-                      </tbody>
-                    </table>
+			<label for="inlineFormInputName2">Loja</label>
+                        <h:selectOneMenu value="#{mostrarControle.loja}" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                              <f:selectItem itemLabel="Lucro Hardware" itemValue="Lucro Hardware"/>
+                              <f:selectItem itemLabel="Pegue-Pague Rangel" itemValue="Pegue-Pague Rangel"/>
+							<f:selectItem itemLabel="Mercearia Rangel" itemValue="Mercearia Rangel"/>
+							<f:selectItem itemLabel="Hyper Mercado Rangel" itemValue="Hyper Mercado Rangel"/>
+							<f:selectItem itemLabel="Rangel Sports" itemValue="Rangel Sports"/>
+							<f:selectItem itemLabel="Rangel Sports Store" itemValue="Rangel Sports Store"/>
+							<f:selectItem itemLabel="BasketRangel" itemValue="BasketRangel"/>
+							<f:selectItem itemLabel="R-Sports" itemValue="R-Sports"/>
+							<f:selectItem itemLabel="Pague Menos" itemValue="Pague Menos"/>
+							<f:selectItem itemLabel="Life" itemValue="Life"/>
+							<f:selectItem itemLabel="Saude Plus" itemValue="Saude Plus"/>
+							<f:selectItem itemLabel="Marta" itemValue="Marta"/>
+							<f:selectItem itemLabel="Coração Forte" itemValue="Coração Forte"/>
+							<f:selectItem itemLabel="New World" itemValue="New World"/>
+							<f:selectItem itemLabel="Droga Vitta" itemValue="Droga Vitta"/>
+
+							
+     			</h:selectOneMenu>
+                    
+                        <h:commandButton class="btn btn-lg btn-primary" value="submit" type="submit" action="#{mostrarControle.acaoConsultaBancoTabela4()}"/>
+					  
+                  </h:form>
+				  
+				   <br>
+                  </br>
+                  <div class="form-group input-group"> 
+					  <span class="input-group-addon"> 
+						  <i class="glyphicon glyphicon-search"></i> 
+					  </span>
+                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control"/>
+                  </div>
+				
+                  <br></br>
+                  <div style="overflow: auto; height: 400px" class="table-responsive table-responsive-data2">
+                      <h:dataTable id="tabela"  class="table table-data2" value="#{mostrarControle.tabela4venda}" var="produto">
+                      <h:column>
+                        <f:facet  name="header">Codigo Produto</f:facet>
+                        #{produto.codigoProduto} </h:column>
+                      <h:column>
+                        <f:facet name="header">Descrição</f:facet>
+                        #{produto.descricaoProduto}</h:column>
+                      <h:column>
+                        <f:facet name="header">Quantidade de Vendas</f:facet>
+                        #{produto.quantidadeVendas}</h:column>
+                      <h:column>
+                        <f:facet name="header">Valor Total</f:facet>
+                        #{produto.valorVendas}</h:column>
+                    </h:dataTable>
                   </div>
                 </div>
               </div>
@@ -273,7 +227,7 @@
             <div class="col-md-12">
               <div class="copyright">
                 <p>Copyright © 2019 purpleBoard - MIT licensed.</p>
-					<p>Made with ♡</p>
+                <p>Made with ♡</p>
               </div>
             </div>
           </div>
@@ -284,6 +238,11 @@
     <!-- END PAGE CONTAINER--> 
   </div>
 </div>
+
+<!--Fazer tabela com consulta--> 
+	<script>
+            $('input#txt_consulta').quicksearch('table#tabela tbody tr')
+        </script> 
 
 <!-- Jquery JS--> 
 <script src="vendor/jquery-3.2.1.min.js"></script> 
@@ -305,6 +264,7 @@
 <script src="vendor/chartjs/Chart.bundle.min.js"></script> 
 <script src="vendor/select2/select2.min.js">
         </script> 
+
 
 <!-- Main JS--> 
 <script src="js/main.js"></script>

@@ -3,7 +3,7 @@ package com.github.braully.dws;
 import com.sun.faces.config.ConfigureListener;
 import static controlizinho.ClienteDao.listarCliente;
 
-import controlizinho.TabelaVendaLojaSemestre;
+import modelinho.TabelaVendaLojaSemestre;
 import controlizinho.ConsultasDao;
 import static controlizinho.ConsultasDao.QtdeVendasSemestre;
 import static controlizinho.ConsultasDao.QuantidadeLoja;
@@ -69,8 +69,8 @@ public class AplicacaoWeb extends WebSecurityConfigurerAdapter implements Servle
     public static void main(String... args) throws Exception  {
         SpringApplication.run(AplicacaoWeb.class, args);
         
-        ArrayList<TabelaConsulta2> listona = GerarTabela2("2019", "1");
-        System.out.println(listona.get(0).getNome());
+       // ArrayList<TabelaConsulta2> listona = GerarTabela2("2019", "1");
+        //System.out.println(listona.get(0).getNome());
        // System.out.println(listona.get(0).getNomeCliente());
        // ArrayList<TabelaVendaLojaSemestre> tt = ValorVendasLojaSemestre();
        // System.out.println(tt.get(0).getNomeLoja());
