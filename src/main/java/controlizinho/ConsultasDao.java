@@ -12,8 +12,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelinho.Produtos;
 import modelinho.Tabela1porData;
 import modelinho.TabelaConsulta1Bimestre;
 import modelinho.TabelaConsulta2;
@@ -280,6 +283,36 @@ public class ConsultasDao {
         
         return lista;
         }
+        
+        //Consultar Produtos para gerar o Json do Geraldo
+        public static List<Produtos> listaDeProdutos() throws Exception{
+             List<Produtos> lista = new LinkedList<>();
+            
+            
+            try (Connection con = Conexao.getConnection();) {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from produto");
+
+            while (rs.next()) {
+                Produtos p = new Produtos();
+                p.setCodigo(rs.getInt("codigo"));
+                p.setDescricaoProduto(rs.getString("descricao"));
+                p.setCategoriaProduto(rs.getString("categoria"));
+               
+                lista.add(p);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ConsultasDao.class.getName()).log(Level.SEVERE, null, ex);
+            throw new erros("Erro ao incluir:\n" + ex.getMessage());
+        }
+        
+        return lista;
+            
+            
+        }
+        
+        
         
         
         

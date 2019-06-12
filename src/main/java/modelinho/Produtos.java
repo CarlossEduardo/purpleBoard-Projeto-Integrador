@@ -10,13 +10,13 @@ package modelinho;
  * @author Aluno
  */
 public class Produtos {
-    int idProduto ;
+
     int codigo;
     String descricaoProduto;
     String categoriaProduto;
 
-    public Produtos(int idProduto, int codigo, String descricaoProduto, String categoriaProduto) {
-        this.idProduto = idProduto;
+    public Produtos(int codigo, String descricaoProduto, String categoriaProduto) {
+
         this.codigo = codigo;
         this.descricaoProduto = descricaoProduto;
         this.categoriaProduto = categoriaProduto;
@@ -25,13 +25,7 @@ public class Produtos {
     public Produtos() {
     }
 
-    public int getIdProduto() {
-        return idProduto;
-    }
 
-    public void setIdProduto(int idProduto) {
-        this.idProduto = idProduto;
-    }
 
     public int getCodigo() {
         return codigo;

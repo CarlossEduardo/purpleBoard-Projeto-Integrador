@@ -1,4 +1,4 @@
-package com.github.braully.dws.modelo;
+package com.github.purpleboard.dws.modelo;
 
 import org.springframework.data.repository.CrudRepository;
 

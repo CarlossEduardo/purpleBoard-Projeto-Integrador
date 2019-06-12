@@ -1,4 +1,4 @@
-package com.github.braully.dws;
+package com.github.purpleboard.dws;
 
 import com.sun.faces.config.ConfigureListener;
 import static controlizinho.ClienteDao.listarCliente;
@@ -15,6 +15,7 @@ import javax.faces.webapp.FacesServlet;
 import javax.servlet.ServletContext;
 import javax.sql.DataSource;
 import modelinho.Cliente1;
+
 import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
@@ -39,6 +40,7 @@ import com.sun.faces.config.ConfigureListener;
 import static controlizinho.ConsultasDao.GerarTabela2;
 import javax.faces.webapp.FacesServlet;
 import javax.servlet.ServletContext;
+import static modelinho.GravarTxt.GravaLogo;
 import modelinho.TabelaConsulta2;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;
@@ -68,6 +70,8 @@ public class AplicacaoWeb extends WebSecurityConfigurerAdapter implements Servle
 
     public static void main(String... args) throws Exception  {
         SpringApplication.run(AplicacaoWeb.class, args);
+        GravaLogo();
+        System.out.println("Gravado!!");
         
        // ArrayList<TabelaConsulta2> listona = GerarTabela2("2019", "1");
         //System.out.println(listona.get(0).getNome());

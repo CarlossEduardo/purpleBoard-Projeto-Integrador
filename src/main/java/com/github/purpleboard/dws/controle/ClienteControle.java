@@ -1,8 +1,8 @@
-package com.github.braully.dws.controle;
+package com.github.purpleboard.dws.controle;
 
-import com.github.braully.dws.modelo.Cliente;
-import com.github.braully.dws.modelo.ClienteDAO;
-import com.github.braully.dws.modelo.Estado;
+import com.github.purpleboard.dws.modelo.Cliente;
+import com.github.purpleboard.dws.modelo.ClienteDAO;
+import com.github.purpleboard.dws.modelo.Estado;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import org.springframework.beans.factory.annotation.Autowired;

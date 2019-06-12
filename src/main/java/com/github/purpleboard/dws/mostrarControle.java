@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.braully.dws.controle;
+package com.github.purpleboard.dws;
 
 import static controlizinho.ConsultasDao.GerarTabela1Bimestre;
 import static controlizinho.ConsultasDao.GerarTabela1Datas;

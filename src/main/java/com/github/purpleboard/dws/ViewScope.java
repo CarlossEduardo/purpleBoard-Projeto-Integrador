@@ -1,4 +1,4 @@
-package com.github.braully.dws;
+package com.github.purpleboard.dws;
 
 import java.util.Map;
 import javax.faces.context.FacesContext;

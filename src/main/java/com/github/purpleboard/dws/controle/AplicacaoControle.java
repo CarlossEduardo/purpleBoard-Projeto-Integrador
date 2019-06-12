@@ -1,4 +1,4 @@
-package com.github.braully.dws.controle;
+package com.github.purpleboard.dws.controle;
 
 import java.util.HashMap;
 import java.util.Map;

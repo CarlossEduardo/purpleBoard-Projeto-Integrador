@@ -70,7 +70,7 @@
   
   <!-- MENU SIDEBAR-->
   <aside class="menu-sidebar d-none d-lg-block">
-    <div class="logo"> <a href="#"> <img src="images/logo1.png" alt="purpleBoard" /> </a> </div>
+    <div class="logo"> <a href="index.xhtml"> <img src="images/logo1.png" alt="purpleBoard" /> </a> </div>
     <div class="menu-sidebar__content js-scrollbar1">
       <nav class="navbar-sidebar">
         <ul class="list-unstyled navbar__list">
@@ -209,6 +209,8 @@
                   <h3 class="title-2">recent reports</h3>
                   <div class="chart-info">
                     <div class="chart-info__left">
+						
+						
                       <div class="chart-note"> <span class="dot dot--blue"></span> <span>products</span> </div>
                       <div class="chart-note mr-0"> <span class="dot dot--green"></span> <span>services</span> </div>
                     </div>
@@ -217,9 +219,14 @@
                       <div class="chart-statis mr-0"> <span class="index decre"> <i class="zmdi zmdi-long-arrow-down"></i>10%</span> <span class="label">services</span> </div>
                     </div>
                   </div>
+					
+					
                   <div class="recent-report__chart">
-                    <canvas id="recent-rep-chart"></canvas>
+                    <canvas id="barCharts"></canvas>
                   </div>
+					
+					
+					
                 </div>
               </div>
             </div>
@@ -269,7 +276,8 @@
               </div>
             </div>
           </div>
-          <div class="row"> </div>
+          <div class="row"> 
+			<p:barChart model="#{chartJsView.hbarModel}" style="width: 100%; height: 500px;"/></div>
           <div class="row"> </div>
           <div class="row">
             <div class="col-md-12">
@@ -309,6 +317,7 @@
         </script> 
 		
 <!-- Meu grafico-->
+	
 	
 	
 	

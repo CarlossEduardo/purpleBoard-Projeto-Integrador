@@ -1,4 +1,4 @@
-package com.github.braully.dws.controle;
+package com.github.purpleboard.dws.controle;
 
 import java.util.Map;
 import org.springframework.web.bind.annotation.RequestMapping;
